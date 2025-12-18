@@ -1,0 +1,397 @@
+:root {
+  --green: #1f6f43;
+  --green-dark: #144d2f;
+  --green-soft: rgba(31, 111, 67, 0.15);
+
+  --white: #f7f9f8;
+  --white-pure: #ffffff;
+  --gray-light: #eef2ef;
+  --gray-text: #4f5b55;
+  --dark-text: #1a1e1c;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--white);
+  color: var(--dark-text);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.container {
+  width: 92%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================= HEADER ================= */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: transparent;
+}
+
+/* TOP BAR */
+.top-bar {
+  background: linear-gradient(
+    to right,
+    var(--green-dark),
+    var(--green),
+    var(--green-dark)
+  );
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* GLASS NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 10px auto;
+  padding: 14px 24px;
+
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 14px;
+  border: 1px solid var(--green-soft);
+
+  box-shadow:
+    0 10px 24px rgba(0,0,0,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.4);
+}
+
+/* LOGO */
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+}
+
+.logo-box img {
+  height: 52px;
+}
+
+.logo-box span {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--green);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+/* NAV LINKS */
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+nav ul li a {
+  color: var(--dark-text);
+  padding: 10px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+nav ul li a:hover {
+  background: rgba(31, 111, 67, 0.12);
+  color: var(--green);
+}
+
+nav ul li a.active {
+  background: rgba(31, 111, 67, 0.18);
+  color: var(--green);
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 88vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("../assets/images/bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 640px;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 44px;
+  font-weight: 700;
+  color: #eafff3;
+}
+
+.hero-text p {
+  margin: 20px 0;
+  font-size: 17px;
+  color: #dfeee6;
+}
+
+.hero-btn {
+  background: var(--green);
+  color: white;
+  padding: 12px 30px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.hero-btn:hover {
+  background: var(--green-dark);
+}
+
+/* ================= ABOUT ================= */
+.about {
+  background: var(--gray-light);
+  padding: 100px 0;
+}
+
+.about-box {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-text {
+  max-width: 580px;
+}
+
+.about-text h2 {
+  color: var(--green);
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.about-text p {
+  color: var(--gray-text);
+  font-size: 16px;
+}
+
+.about-image {
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 24px 50px rgba(0,0,0,0.15);
+}
+
+/* ================= PRODUCTS ================= */
+.products {
+  background: var(--white-pure);
+  padding: 100px 0;
+}
+
+.page-title {
+  text-align: center;
+  color: var(--green);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.page-subtitle {
+  text-align: center;
+  color: var(--gray-text);
+  font-size: 16px;
+  margin: 12px 0 60px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 28px;
+}
+
+.category-card {
+  background: var(--white-pure);
+  border-radius: 12px;
+  padding: 28px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--dark-text);
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid var(--green-soft);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--green);
+  color: var(--green);
+}
+
+/* ================= WHATSAPP QUERY ================= */
+.whatsapp-query {
+  background: linear-gradient(135deg, var(--green), var(--green-dark));
+  padding: 60px 0;
+  text-align: center;
+  color: white;
+}
+
+.whatsapp-query h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.whatsapp-query p {
+  font-size: 16px;
+  margin-bottom: 22px;
+}
+
+.whatsapp-btn {
+  padding: 12px 32px;
+  background: white;
+  color: var(--green);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* ================= MAP ================= */
+.map-section {
+  background: var(--gray-light);
+  padding: 100px 0;
+}
+
+.map-box {
+  display: flex;
+  gap: 50px;
+}
+
+.map-info h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--green);
+  margin-bottom: 18px;
+}
+
+.map-info p {
+  font-size: 16px;
+  color: var(--gray-text);
+  margin-bottom: 14px;
+}
+
+.map-btn {
+  padding: 12px 28px;
+  background: var(--green);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.map-frame {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 24px 50px rgba(0,0,0,0.15);
+}
+
+.map-frame iframe {
+  width: 100%;
+  height: 360px;
+  border: none;
+}
+
+/* ================= CONTACT ================= */
+.contact-section {
+  background: var(--white-pure);
+  padding: 90px 0;
+  text-align: center;
+}
+
+.contact-section p {
+  font-size: 16px;
+  color: var(--gray-text);
+  margin: 10px 0;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: var(--green-dark);
+  padding: 26px;
+  text-align: center;
+  font-size: 14px;
+  color: #e6f3ec;
+}
+
+/* ================= FLOATING WHATSAPP ================= */
+.whatsapp-float {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 18px 36px rgba(0,0,0,0.25);
+}
+
+.whatsapp-float img {
+  width: 32px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .about-box,
+  .map-box {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .logo-box img {
+    height: 46px;
+  }
+
+  .logo-box span {
+    font-size: 20px;
+  }
+}
