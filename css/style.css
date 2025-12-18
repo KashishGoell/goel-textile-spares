@@ -443,3 +443,20 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+/* ================= MOBILE NAVBAR: LOGO ONLY ================= */
+@media (max-width: 768px) {
+
+  /* Hide navigation links on mobile */
+  nav {
+    display: none;
+  }
+
+  /* Center logo nicely */
+  .navbar {
+    justify-content: center;
+  }
+
+  .logo-box {
+    justify-content: center;
+  }
+}
