@@ -259,6 +259,27 @@ nav ul li a.active {
   color: var(--green);
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small phones */
+@media (max-width: 420px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ================= WHATSAPP QUERY ================= */
 .whatsapp-query {
   background: linear-gradient(135deg, var(--green), var(--green-dark));
@@ -393,5 +414,32 @@ footer {
 
   .logo-box span {
     font-size: 20px;
+  }
+}
+/* ================= PRODUCT GRID (YARN GUIDES, ETC.) ================= */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 items per row */
+  gap: 28px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small phones */
+@media (max-width: 420px) {
+  .product-grid {
+    grid-template-columns: 1fr;
   }
 }
